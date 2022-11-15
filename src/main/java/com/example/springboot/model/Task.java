@@ -15,9 +15,10 @@ public class Task {
     public Task() {
     }
 
-    public Task(Integer priority, String description) {
+    public Task(Integer priority, String description,LocalDate date) {
         this.priority = priority;
         this.description = description;
+        this.date=date;
     }
 
     public Integer getId() {
