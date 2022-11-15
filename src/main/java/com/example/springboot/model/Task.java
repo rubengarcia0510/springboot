@@ -1,15 +1,23 @@
 package com.example.springboot.model;
 
+
 import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.time.LocalDate;
 
+@Entity
 public class Task {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private Integer priority;
     private String description;
-    @DateTimeFormat("yyyy-MM-dd")
+    @DateTimeFormat(fallbackPatterns = "yyyy-MM-dd")
     private LocalDate date;
 
     public Task() {
