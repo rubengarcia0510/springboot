@@ -18,7 +18,7 @@
                 <td>${task.description}</td>
                 <td>${task.date}</td>
             </tr>
-        <#/list>
+        </#list>
     </table>
 </body>
 </html>
