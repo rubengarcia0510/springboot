@@ -17,6 +17,7 @@
                 <td>${task.priority}</td>
                 <td>${task.description}</td>
                 <td>${task.date}</td>
+                <td><a href="${'tasks/'+task.id}">Done</a></td>
             </tr>
         </#list>
     </table>
