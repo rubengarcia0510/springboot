@@ -3,17 +3,14 @@ package com.example.springboot.model;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
 public class Task {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private Integer priority;
     private String description;
@@ -23,10 +20,11 @@ public class Task {
     public Task() {
     }
 
-    public Task(Integer priority, String description,LocalDate date) {
+    public Task(Integer id,Integer priority, String description,LocalDate date) {
         this.priority = priority;
         this.description = description;
         this.date=date;
+        this.id=id;
     }
 
     public Integer getId() {
