@@ -21,5 +21,6 @@
             </tr>
         </#list>
     </table>
+    <a href="newTask">New Task</a>
 </body>
 </html>

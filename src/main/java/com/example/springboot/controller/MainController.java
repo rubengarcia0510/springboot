@@ -34,10 +34,10 @@ public class MainController {
 
     @RequestMapping("newTask")
     public String getTaskForm(){
-        return "task-form";
+        return "taskForm";
     }
 
-    @PostMapping("/process/form")
+    @PostMapping("/processForm")
     public String addTask(@ModelAttribute Task task){
         taskRepository.save(task);
         return "redirect:/";

@@ -6,7 +6,7 @@
 </head>
 <body>
     <h2>TODO LIST</h2>
-    <form action="/process/form" method="post">
+    <form action="/processForm" method="post">
         <div>
             <label>Description</label>
             <input type="text" name="description"/>
