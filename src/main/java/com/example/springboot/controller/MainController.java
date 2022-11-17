@@ -32,7 +32,7 @@ public class MainController {
         return "redirect:/";
     }
 
-    @RequestMapping("newTask")
+    @RequestMapping("/newTask")
     public String getTaskForm(){
         return "taskForm";
     }
@@ -41,6 +41,13 @@ public class MainController {
     public String addTask(@ModelAttribute Task task){
         taskRepository.save(task);
         return "redirect:/";
+    }
+
+    @RequestMapping("/sortByPriority")
+    public String getAllByPriority(Model model){
+        List<Task> tasks=taskRepository.findAllByOrderByPriority();
+        model.addAttribute("tasks",tasks);
+        return "index";
     }
 
 

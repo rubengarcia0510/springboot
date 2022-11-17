@@ -6,6 +6,7 @@
 </head>
 <body>
     <h2>TODO LIST</h2>
+    <a href="sortByPriority">Sort By Priority</a>
     <table>
         <tr>
             <td>priority</td>
