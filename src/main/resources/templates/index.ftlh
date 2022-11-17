@@ -6,6 +6,7 @@
 </head>
 <body>
     <h2>TODO LIST</h2>
+    <a href="sortByPriority">Sort By Priority</a>
     <table>
         <tr>
             <td>priority</td>
@@ -17,8 +18,10 @@
                 <td>${task.priority}</td>
                 <td>${task.description}</td>
                 <td>${task.date}</td>
+                <td><a href="${'tasks/'+task.id}">Done</a></td>
             </tr>
         </#list>
     </table>
+    <a href="newTask">New Task</a>
 </body>
 </html>
